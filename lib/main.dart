@@ -1,5 +1,6 @@
 import 'package:clover/components/test_component.dart';
 import 'package:clover/constants.dart';
+import 'package:clover/screens/authentication/login.dart';
 import 'package:clover/screens/splash_screen/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -22,8 +23,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Clover',
       theme: ThemeData(
-        backgroundColor: Colors.white,
-        colorScheme: const ColorScheme(brightness: Brightness.light, primary: Color(0xffDDF247), onPrimary: Colors.black, secondary: Colors.black, onSecondary: Colors.white, error: Colors.red, onError: Colors.white, background: Colors.white, onBackground: Colors.black, surface: Colors.white, onSurface: Colors.black,),
+        backgroundColor: backgroundColor,
+        // colorScheme: const ColorScheme(brightness: Brightness.light, primary: Color(0xffDDF247), onPrimary: Colors.black, secondary: Colors.black, onSecondary: Colors.white, error: Colors.red, onError: Colors.white, background: Colors.white, onBackground: Colors.black, surface: Colors.white, onSurface: Colors.black,),
         appBarTheme: const AppBarTheme(
           elevation: 0,
           backgroundColor: Colors.transparent,
