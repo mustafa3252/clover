@@ -1,4 +1,5 @@
 import 'package:clover/components/test_component.dart';
+import 'package:clover/screens/authentication/login.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void redirect(){
     Future.delayed(const Duration(seconds: 3)).then((value){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const TestComponent()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Login()));
     });
   }
 
@@ -30,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: Image.asset("assets/images/clover_gif.gif", width: width / 1.5),
+        child: Hero(tag: 'logo', child: Image.asset("assets/images/clover_gif.gif", width: width / 1.5)),
       ),
     );
   }
