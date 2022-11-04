@@ -1,5 +1,6 @@
 import 'package:clover/components/test_component.dart';
 import 'package:clover/constants.dart';
+import 'package:clover/screens/splash_screen/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: 'Urbanist'
       ),
-      home: const TestComponent(),
+      home: const SplashScreen(),
     );
   }
 }
