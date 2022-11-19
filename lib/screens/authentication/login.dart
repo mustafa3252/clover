@@ -17,7 +17,7 @@ class _LoginState extends State<Login> {
 
   bool secureText = true;
 
-  void signin(){
+  void signin() {
     print(emailController.text);
     final ep = Encryption().encrypt(passwordController.text);
     print(ep);
@@ -37,7 +37,7 @@ class _LoginState extends State<Login> {
           width: width,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
                 children: [
@@ -64,7 +64,7 @@ class _LoginState extends State<Login> {
                       },
                       secureText: secureText),
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       signin();
                     },
                     child: Container(
@@ -78,7 +78,8 @@ class _LoginState extends State<Login> {
                       child: const Text(
                         'Sign In',
                         style: TextStyle(
-                            color: secondaryTextColor, fontWeight: FontWeight.bold),
+                            color: secondaryTextColor,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -96,12 +97,14 @@ class _LoginState extends State<Login> {
               Column(
                 children: [
                   const Text("Don't have an account?",
-                        style: TextStyle(color: tertiaryTextColor)),
+                      style: TextStyle(color: tertiaryTextColor)),
                   TextButton(
                       onPressed: () {},
                       child: const Text(
                         'Sign Up',
-                        style: TextStyle(color: primaryButtonColor, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: primaryButtonColor,
+                            fontWeight: FontWeight.bold),
                       ))
                 ],
               )
