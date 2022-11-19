@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../authentication/login.dart';
+// import '../authentication/login.dart';
 import '../on_boarding/on_boarding_screen.dart';
+import '../product_page.dart';
 
 class SplashScreen extends StatefulWidget {
   final bool seen;
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
       if (widget.seen) {
-        showHome = const Login();
+        showHome = const ProductPage();
       } else {
         showHome = const OnBoardingScreen();
       }
